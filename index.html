@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Health Calculator">
+    <meta name="author" content="Ekaterina Zatsepina">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <title> Health Calculator </title>
+</head>
+<body>
+    <div class="main-container">
+        <nav>
+            <ul>
+                <li> <a href="#bmi_section"> BMI</a></li>
+                <li> <a href="#heart_section"> Target Heartrate</a> </li>
+                <li> <a href="#bmr_section"> BMR </a></li>
+                <li> <a href="#macros"> Macronutrients </a></li>
+            </ul>   
+            <hr>
+        </nav>
+        <!-- Button to scroll up -->
+        <button onclick="topFunction()" id="upBtn" title="Go to top"> 
+            <i></i>
+        </button>
+
+        <!-- Section about BMI -->
+        <section class="content" id="bmi_section">
+            <article>
+                <h2>Body Mass Index or BMI Calculator</h2>
+                <h3>What is body mass index (BMI)?</h3>
+                <img id="bmi-img" src="bmi.png" alt="BMI table">
+                <p>
+                    BMI uses weight and height to determine whether an adult is within the healthy weight range, underweight, overweight or obese.
+                    It provides an estimate of total body fat and your risk of developing weight-related diseases.<br>
+                    Two methods that are commonly used to estimate whether you are a healthy weight or not are body mass index (BMI) and waist circumference.
+                    But we are going to have a closer look at BMI.<hr>
+                    BMI is calculated by dividing weight by the square of height as follows:
+                    <strong>BMI = Weight (kg)/Height (m)<sup>2</sup></strong>
+                    <br><br>
+                    Use our BMI calculator to quickly work out your BMI. <br>
+                    For example, BMI = 60(kg) / 1.75(m)<sup>2</sup> 
+                    <br> <br>
+                    <div class="formula">
+                        Your weight:<br> <input type="text" id="weight" name="weight"> <br>
+                        Your height (centimeters): <br> <input type="text" id="height" name="height"> <br><br>
+                        <input id="bmiButton" class="count" type="button" onClick="countBMI()" value="Count BMI"> 
+                        <br> <br>
+                        <strong>Your BMI is :</strong> 
+                        <span id="result"></span>
+                    </div> 
+                </p> 
+            </article>
+        </section>
+
+        <!-- Section about Heart rate -->
+        <section class="content" id="heart_section">
+            <article>    
+                <h2>TARGET Heart Rate Calculator</h2>
+                <h3>The target heart rate gives you a starting point for figuring out just how hard you need to work when you exercise.</h3>
+                <img id="heartrate-img" src="heartrate.png" alt="Heart rate table">
+                <p>
+                    Experts have figured out an ideal range of heart rates that allow you to work as hard as you need to without overdoing it or, on the other hand, wasting time by not working as hard as you could.
+                    <br>So, how do you find out your target heart rate zones? <br>
+                    You'll need to know your resting heart rate.
+                    To find this, take your pulse for one full minute when you first wake up in the morning.
+                    Ideally, you should also measure your maximum heart rate for more accurate results. <br>
+                    If the maximum heart rate cannot be measured directly, it can be roughly estimated using the traditional formula<strong> 220 minus your age. </strong>
+                    <hr>
+                    One way to find your Target heart rate is by using <strong>The Karvonen Formula.</strong> <br>
+                    The Karvonen Formula is a mathematical formula that helps you determine your target heart rate (HR) training zone. 
+                    The formula uses maximum and resting heart rate with the desired training intensity to get a target heart rate: <br>
+                    <strong>Target Heart Rate = ((max HR − resting HR) × %Intensity) + resting HR </strong>
+                    <br><br>
+                    <div class="formula">
+                        Your max HR:<br> <input type="text" id="maxHR" name="maxHR"> <br>
+                        Your resting HR: <br><input type="text" id="restHR" name="restHR"> <br>
+                        Desired training intensity (%): <br> <input type="text" id="intensity" name="intensity"> <br><br>
+                        <input id="thrButton" class="count" type="button" onClick="countTHR()" value="Count my Target HR">
+                        <br> <br>
+                        Your Target Heart rate is : 
+                        <span id="resultTHR"></span>
+                    </div>
+                </p>
+            </article>
+        </section>
+
+        <!-- Section about BMR -->
+        <section class="content"> <a id="bmr_section"></a>
+            <article>
+                <h2>Basal Metabolic Rate Calculator</h2>
+                <h3>What is basal metabolic rate or BMR?</h3>
+                <p>
+                    Basal metabolic rate is the amount of energy per unit time that a person needs to keep the body functioning at rest. 
+                    You can think of it as the amount of energy you would burn if you stayed in bed all day.
+                    Some of those processes are breathing, blood circulation, controlling body temperature, cell growth, brain and nerve function, and contraction of muscles. <br>
+                    Basal metabolic rate (BMR) affects the rate that a person burns calories and ultimately whether that individual maintains, gains, or loses weight. 
+                    Your BMR decreases as you age so it becomes harder to stay slim as you get older.
+                    <hr>
+                    You can count your BMR manually using Mifflin St. Jeor's formula: <br>
+                    For Men: <strong>10 x weight (kg) + 6.25 x height (cm) – 5 x Age + 5</strong><br>
+                    For Women: <strong>10 x weight (kg) + 6.25 x height (cm) – 5 x Age – 161</strong><br><br>
+                    Or you can just use our BMR calculator to find out how many kilocalories your body needs at rest just to fuel its normal metabolic activity.<br><br>
+                    <div class="formula">
+                        Your weight:<br> <input type="text" id="weight1" name="weight"> <br>
+                        Your height (centimeters):<br> <input type="text" id="height1" name="height"> <br>
+                        Your age:<br> <input type="text" id="age" name="age"> <br><br>
+                    
+                        <label>Female</label>
+                        <input type="radio" id="female"
+                        name="gender">
+                        <br>
+                        <label>Male</label>
+                        <input type="radio" id="male"
+                        name="gender">
+                        <br><br>
+                        <input id="bmrButton" class="count" type="button" onClick="countBMR()" value="Count my BMR">
+                        <br> <br> 
+                        Your Basal Metabolic Rate is : 
+                        <span id="resultBMR"></span>
+                    </div>
+                </p>
+            </article>
+        </section>
+
+        <!-- Section about Macros -->
+        <section class="content" id="macros">
+                <article>
+                    <h2>Macronutrients</h2>
+                    <h3>Calculating Your Proteins, Fats and Carbs.</h3>
+                    <p>
+                        The 3 macronutrients are carbohydrates, protein and fats.<br>
+                        A calorie is a unit of measurement that counts the energy contained in food.
+                        If something contains 100 calories, your body uses 100 calories of energy to metabolize it. 
+                        Each person has their own basal metabolic rate and we have already found your BMR in a previous <a href="#bmr_section"><strong>section</strong></a>. <br>
+                        Any exercise or physical activity is added to this basal metabolic rate. <br>
+                        So to calculate the calories you need to maintain your current weight, we need to multiply your BMR by an activity factor. <hr>
+                        If you do not exercise and have a desk job, your activity factor is 1.2.
+                        If you exercise one to three days a week, your activity factor is 1.375. 
+                        If you exercise three to five days a week, your activity factor is 1.55. 
+                        If you're involved in sports and exercise six to seven days a week, your activity factor is 1.725. 
+                        If you're training for a marathon or have a physically demanding job, your activity factor is 1.9. <br>
+                        <strong>However, your BMR decreases as you lose weight, which means you need to eat even less as your weight goes down to continue to drop kgs.</strong>
+                        Loss of muscle may be partly responsible for some of the decrease in your BMR. 
+                        <br><br>
+                        <div class="formula">
+                            Your BMR:<br> <input type="text" id="bmr" name="bmr"> <br><br>
+                            Select your activity level:
+                            <select id="activity_selector" onchange="macrosSelection (activity_selector)">
+                                <option></option>
+                                <option value="1.2" id="little">Little or no exercise(office job)</option>
+                                <option value="1.375" id="light">Light exercise (1-3 days per week)</option>
+                                <option value="1.55" id="moderate">Moderate exercise (3-5 days/week)</option>
+                                <option value="1.725" id="active">Very active (6-7 days a week)</option>
+                                <option value="1.9" id="superActive">Physically demanding job or preparing for a marathon</option>
+                            </select>
+                            <br><br>
+                            <input id="macrosButton" class="count" type="button" onClick="countCalorieIntake()" value="Count Calorie Intake">
+                            <br> <br> 
+                            Your Calorie Intake is: 
+                            <span id="resultCalorieIntake"></span>
+                            <br> <br> 
+                        </div>
+                        Below you can find charts that will show you the Macronutrients ratio you need to take depending on your weight goal.<br><br>
+                        <img src="higher.png" class="macros-img" style="margin-right: 40px;">
+                        <img src="moderate.png"class="macros-img" style="margin-right: 40px;">
+                        <img src="low.png" class="macros-img">
+                    </p>
+                </article>
+            </section>              
+    </div>
+    <script>
+        //Make older browser aware of new HTML5 layout tags
+        'header nav aside article footer section'.replace(/\w+/g, function(n) { document.createElement(n) })
+    </script>
+    <script type="text/javascript" src="calculator.js"></script>
+</body>
+</html>

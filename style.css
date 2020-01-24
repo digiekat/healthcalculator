@@ -1,0 +1,213 @@
+
+body {
+  background-color: white;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  background-image: url("leaf.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+/* Style for the main container */
+
+.main-container {
+  display: flex;
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Style for the navigation */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+  font-size: 22px; 
+  border: solid 1px rgba(196, 207, 203, 1);
+  background-color: rgba(196, 207, 203, 0.3);
+  margin: 4px;
+  padding: 8px 0px;
+}
+
+li a {
+  text-align: center;
+  padding: 0px 30px;
+  color: black;
+}
+
+li a:hover {
+  font-size: 24px;
+}
+
+/* Cnanges for smaller screens */
+
+@media screen and (max-width: 600px)
+{
+  li {float: none; font-size: 16px;}
+  .content {margin: 10px;}
+  body {font-size:12px; background-size: cover;}
+}
+
+/* Style for the articles */
+
+article {
+  margin: 0 60px 20px 60px;
+} 
+
+/* Style for the content within articles */
+
+.content {
+  border: 1px solid rgba(196, 207, 203, 1);
+  background-color: rgba(196, 207, 203, 0.62);
+  margin: 60px 40px;
+  width: 100%;
+}
+
+/* Style for the formula and inputs */
+
+.formula {
+  text-align: left;
+}
+
+input {
+  border: 1px solid;
+  border-radius: 20px;
+  width: 90px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+textarea:focus, input:focus, select:focus{
+  outline: none;
+}
+
+input[type="text"]
+{
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Style for count button */
+
+.count {
+  border: 1px solid;
+  border-radius: 20px;
+  height: 28px;
+  width: 140px;
+  font-size: 12px;
+  transition: transform 1s;
+  background-color: rgba(196, 207, 203, 0.8);
+}
+
+.count:hover {
+  background: transparent;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  -ms-transform: scale(1.1); /* IE 9 */
+  border: solid 2px;
+}
+
+#result {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Style for dropdown list */
+
+select {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 200px;
+  height: 24px;
+  font-size: 14px;
+}
+
+/* Style for links */
+
+a:link, a:visited, a:link:active, a:visited:active { 
+  text-decoration: none;
+  color: black;
+}
+
+/* Style for images */
+
+#bmi-img {
+  float: right;
+  padding: 0 0 20px 20px;
+  width: 100%;
+  max-width: 360px;
+}
+
+#heartrate-img {
+  float: right;
+  padding: 0 0 10px 20px;
+  width:100%;
+  max-width: 400px;
+}
+
+.macros-img{
+  width:100%;
+  max-width: 360px;
+}
+
+img {
+  cursor: pointer;
+  transition: 0.3s;
+} 
+
+img:hover {
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  transform: scale(1.1);
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari and Chrome */
+}
+
+
+/* Style for GO UP button */
+
+#upBtn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  z-index: 99;
+  font-size: 16px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  outline: none;
+  background-color: rgb(128, 128, 128);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#upBtn:hover {
+  background-color: rgb(87, 87, 87);
+}
+
+i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  -ms-transform: rotate(-135deg); /* IE 9 */
+}
